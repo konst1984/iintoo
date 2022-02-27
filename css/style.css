@@ -1,0 +1,252 @@
+@font-face {
+    font-family: 'barlowregular';
+    src: url('../fonts/Barlow-Regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+     width: 100%;
+     font-size: 100%;
+    font-family: barlowregular, sans-serif;
+     line-height: 1;
+     font-size: 14px;
+     -ms-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+     -webkit-text-size-adjust: 100%;
+ }
+
+
+input{
+    border: transparent;
+    cursor:pointer;
+}
+main{
+    width: 100%;
+    height: 100%;
+    max-width: 1600px;
+    margin:auto;
+}
+
+.wrapper{
+    height: 100%;
+    display: flex;
+}
+
+.banner{
+    width: 47%;
+    position: relative;
+    background: url('../img/bg.jpg')  100% -1%/ cover no-repeat;
+}
+
+.hero-wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding: 120px 70px 106px;
+    gap: 55px;
+}
+
+.hero__title{
+    font-size: 2.1rem;
+    line-height: 32px;
+    letter-spacing: -0.2px;
+    padding-bottom: 21px;
+}
+
+.hero__reg{
+    display: flex;
+    width: 530px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.hero__text{
+    font-size: 1.4rem;
+}
+.hero__text_after-title{
+
+}
+
+.button{
+    padding: 12px 52px;
+    color: #fff;
+    cursor:pointer;
+}
+.logo{
+    position: absolute;
+    top: 47px;
+    left: 39px;
+}
+.logo__img{
+    width: 141px;
+    height: 32px;
+}
+
+.hero__separator{
+    position: relative;
+    left: 0px;
+    bottom: -4px;
+    margin: auto;
+}
+.hero__separator__text{
+    position: absolute;
+    padding: 0 5px;
+    top: -7px;
+    right: -12px;
+    font-size: 12px;
+    background-color: #fff;
+}
+.hero__separator__line{
+    position: absolute;
+    top:-2px;
+    width: 245px;
+    height: 1px;
+    background-color: black;
+    transform: translateX(-50%);
+ }
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 57px;
+}
+.button__hero__reg{
+    position: relative;
+    display: flex;
+}
+.button__hero__reg_facebook{
+    background-color: #255A9B;
+}
+
+.button__hero__reg_linkedin{
+    background-color: #0076B6;
+}
+.button__icon{
+    position: absolute;
+    width: 20px;
+    top: 8px;
+    left: 11px;
+}
+.input-boxes{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 530px;
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    width: 245px;
+    height: 60px;
+    padding: 6px 10px;
+    border: 1px solid;
+}
+#email,#phone{
+    font-size: 1.2rem;
+    height: 100%;
+    outline: none;
+}
+#email:focus,
+#phone:focus{
+    background-color: #EEEEEE;
+}
+
+.label{
+    font-size: 1.1rem;
+}
+.about{
+    padding-left: 2px;
+}
+.about__title{
+    font-size: 1.5rem;
+    padding-bottom: 18px;
+}
+.about__text{
+    margin-bottom: 50px;
+}
+.radio-wrapper{
+    max-width: 462px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 144px;
+
+}
+.radio-item{
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+
+}
+
+.tooltiptext{
+    position: absolute;
+    visibility: hidden;
+    top: 40px;
+    width: 250px;
+    padding: 10px;
+    font-size: 1rem;
+    line-height: 18px;
+    color:#7B8A92;
+    box-shadow: 0px 0px 25px 2px #eeeeee;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.radio-item:hover .tooltiptext{
+    visibility: visible;
+    opacity: 1;
+}
+
+.radio-item__input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.radio-item__input:checked + .radio-item__mark{
+    border: 3px solid #3698FB;
+}
+.radio-item__mark{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #EEEEEE;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+.radio-item__label{
+    padding-left: 10px;
+}
+.accord-box{
+    display: flex;
+    align-items: center;
+    margin-bottom: 62px;
+}
+
+.accord-box__input{
+    width: 14px;
+    height: 14px;
+    padding-left: 2px;
+}
+
+.accord-box__label{
+    padding-left: 8px;
+    letter-spacing: -0.4px;
+    cursor:pointer;
+}
+
+.button_account{
+    background-color: #3698FB;
+    padding: 12px 70px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+}
