@@ -187,7 +187,7 @@ main{
 }
 .about__title{
     font-size: 1.5rem;
-    padding-bottom: 18px;
+    padding-bottom: 15px;
 }
 .about__subtitle{
     margin-bottom: 50px;
@@ -195,8 +195,8 @@ main{
 .radio-wrapper{
     max-width: 462px;
     display: flex;
-    justify-content: space-between;
-    padding-bottom: 145px;
+    gap:34px;
+    padding-bottom: 148px;
 
 }
 .radio-item{
