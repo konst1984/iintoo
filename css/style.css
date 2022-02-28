@@ -196,7 +196,7 @@ main{
     max-width: 462px;
     display: flex;
     justify-content: space-between;
-    padding-bottom: 144px;
+    padding-bottom: 145px;
 
 }
 .radio-item{
@@ -238,14 +238,6 @@ main{
 .radio-item__input:checked + .radio-item__mark{
     border: 3px solid #3698FB;
 }
-.radio-item__mark{
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    border: 2px solid #EEEEEE;
-    border-radius: 50%;
-    flex-shrink: 0;
-}
 .radio-item__label{
     padding-left: 10px;
 }
@@ -266,10 +258,20 @@ main{
     border: 3px solid #3698FB;
 }
 
+.radio-item__mark{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #EEEEEE;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+.radio-item__mark-important{
+    padding-left: 10px;
+}
 .accord-box{
     display: flex;
-    padding: 5px;
-    margin-bottom: 60px;
+    margin-bottom: 58px;
     width: fit-content;
     align-items: center;
 }
