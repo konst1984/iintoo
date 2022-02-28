@@ -12,10 +12,11 @@
     box-sizing: border-box;
 }
 html,body{
+     height: auto;
      width: 100%;
-     font-size: 100%;
-    font-family: barlowregular, sans-serif;
+     font-family: barlowregular, sans-serif;
      line-height: 1;
+     color: #2A4A5C;
      font-size: 14px;
      -ms-text-size-adjust: 100%;
      -moz-text-size-adjust: 100%;
@@ -40,9 +41,11 @@ main{
 }
 
 .banner{
-    width: 47%;
+    min-width: 320px;
+    min-height: 400px;
+    width: 47.4%;
     position: relative;
-    background: url('../img/bg.jpg')  100% -1%/ cover no-repeat;
+    background: url('../img/bg.jpg')  5% 0%/ cover no-repeat;
 }
 
 .hero-wrapper{
@@ -50,8 +53,8 @@ main{
     flex-direction: column;
     height: 100%;
     width: 100%;
-    padding: 120px 70px 106px;
-    gap: 55px;
+    padding: 112px 80px 106px 72px;
+    gap: 56px;
 }
 
 .hero__title{
@@ -61,17 +64,14 @@ main{
     padding-bottom: 21px;
 }
 
-.hero__reg{
+.register{
     display: flex;
-    width: 530px;
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 36px;
 }
-.hero__text{
+.hero__subtitle{
     font-size: 1.4rem;
-}
-.hero__text_after-title{
-
 }
 
 .button{
@@ -79,23 +79,33 @@ main{
     color: #fff;
     cursor:pointer;
 }
+.button:hover{
+    background-color: rgba(37, 90, 155, .7);
+}
+.button:focus{
+    background-color: rgba(37, 90, 155, .7);
+
+}
+.button:active{
+    background-color:rgba(54, 152, 251, .7);
+}
 .logo{
     position: absolute;
-    top: 47px;
-    left: 39px;
+    top: 40px;
+    left: 50px;
 }
 .logo__img{
     width: 141px;
     height: 32px;
 }
 
-.hero__separator{
+.separator{
     position: relative;
     left: 0px;
     bottom: -4px;
     margin: auto;
 }
-.hero__separator__text{
+.separator__text{
     position: absolute;
     padding: 0 5px;
     top: -7px;
@@ -103,7 +113,7 @@ main{
     font-size: 12px;
     background-color: #fff;
 }
-.hero__separator__line{
+.separator__line{
     position: absolute;
     top:-2px;
     width: 245px;
@@ -116,34 +126,45 @@ main{
     flex-direction: column;
     gap: 57px;
 }
-.button__hero__reg{
+.register__button{
     position: relative;
-    display: flex;
+    width: 248px;
 }
-.button__hero__reg_facebook{
+.register__button_facebook{
     background-color: #255A9B;
 }
 
-.button__hero__reg_linkedin{
+.register__button_linkedin{
     background-color: #0076B6;
 }
-.button__icon{
+
+.register__button_facebook::before,
+.register__button_linkedin::before{
+    content: '';
     position: absolute;
+    display: block;
     width: 20px;
+    height: 20px;
     top: 8px;
     left: 11px;
+}
+.register__button_facebook::before{
+    background: url("../img/facebook.svg") center center /cover no-repeat;
+}
+.register__button_linkedin::before{
+    background: url("../img/linkedin.svg" ) center center /cover no-repeat;
 }
 .input-boxes{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    max-width: 530px;
+    gap: 36px;
 }
 
 .input-box{
     display: flex;
     flex-direction: column;
-    width: 245px;
+    width: 248px;
     height: 60px;
     padding: 6px 10px;
     border: 1px solid;
@@ -168,7 +189,7 @@ main{
     font-size: 1.5rem;
     padding-bottom: 18px;
 }
-.about__text{
+.about__subtitle{
     margin-bottom: 50px;
 }
 .radio-wrapper{
@@ -211,7 +232,9 @@ main{
     height: 100%;
     opacity: 0;
 }
-
+.radio-item__input:hover + .radio-item__mark{
+    border: 3px solid #7B8A92;
+}
 .radio-item__input:checked + .radio-item__mark{
     border: 3px solid #3698FB;
 }
@@ -226,16 +249,42 @@ main{
 .radio-item__label{
     padding-left: 10px;
 }
-.accord-box{
-    display: flex;
-    align-items: center;
-    margin-bottom: 62px;
+
+.radio-item__input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+.radio-item__input:hover + .radio-item__mark{
+    border: 3px solid #7B8A92;
+}
+.radio-item__input:focus + .radio-item__mark{
+    border: 3px solid #3698FB;
+}
+.radio-item__input:checked + .radio-item__mark{
+    border: 3px solid #3698FB;
 }
 
+.accord-box{
+    display: flex;
+    padding: 5px;
+    margin-bottom: 60px;
+    width: fit-content;
+    align-items: center;
+}
 .accord-box__input{
     width: 14px;
     height: 14px;
     padding-left: 2px;
+}
+.accord-box__input:hover,
+.accord-box__input:focus{
+    outline: 3px solid #3698FB;
+}
+
+.accord-box__label:hover ~ .accord-box__input{
+    border: 3px solid #7B8A92;
 }
 
 .accord-box__label{
@@ -243,10 +292,108 @@ main{
     letter-spacing: -0.4px;
     cursor:pointer;
 }
-
+.accord-box__link{
+    padding: 2px;
+}
+.accord-box__link:visited{
+    color: blue;
+}
 .button_account{
-    background-color: #3698FB;
     padding: 12px 70px;
     letter-spacing: 1px;
     border-radius: 5px;
+    background-color: #3698FB;
+}
+
+@media (max-width: 1300px){
+    .hero,
+    .about{
+        text-align: center;
+    }
+    .register,
+    .input-boxes{
+        justify-content: center;
+    }
+}
+
+@media (max-width: 991px){
+    .wrapper{
+        flex-wrap: wrap;
+    }
+    .banner,
+    .section-hero{
+        width: 100%;
+    }
+    .banner{
+        background: url(../img/bg.jpg) 0% 55%/ cover no-repeat;
+    }
+    .hero-wrapper {
+        padding: 90px 30px;
+    }
+    .radio-wrapper {
+        max-width: 462px;
+        margin: auto;
+    }
+    .accord-box {
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .tooltiptext{
+        right: -70px;
+    }
+}
+
+@media (max-width: 479px){
+
+    .logo{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .logo__img{
+        width: 300px;
+        height: 90px;
+        fill:#ffffff;
+    }
+    .register__button{
+        text-align: center;
+    }
+    .register__button,
+    .input-box{
+        width: 100%;
+    }
+    .radio-wrapper{
+        flex-direction: column;
+        padding-left: 40px;
+        gap:80px;
+    }
+    .tooltiptext{
+        top: 30px;
+        right: 40px;
+        width: 100%;
+    }
+    .radio-item__mark{
+        width: 26px;
+        height: 26px;
+    }
+
+    .accord-box{
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+    .button_account{
+        width: 100%;
+    }
+    .radio-item__input:checked + .radio-item__mark{
+        border: 5px solid #3698FB;
+    }
+}
+@media (max-width: 321px) {
+        .radio-wrapper{
+            gap:110px;
+        }
+        .tooltiptext {
+            top: 35px;
+            right: 40px;
+            width: 100%;
+        }
 }
