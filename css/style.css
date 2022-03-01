@@ -22,8 +22,13 @@ html,body{
      -moz-text-size-adjust: 100%;
      -webkit-text-size-adjust: 100%;
  }
-
-
+:focus{
+    outline: none;
+}
+:focus-visible {
+    box-shadow:  0 0 0 2px #ffffff,
+    0 0 0 4px #3698fb;
+}
 input{
     border: transparent;
     cursor:pointer;
@@ -82,10 +87,7 @@ main{
 .button:hover{
     background-color: rgba(37, 90, 155, .7);
 }
-.button:focus{
-    background-color: rgba(37, 90, 155, .7);
 
-}
 .button:active{
     background-color:rgba(54, 152, 251, .7);
 }
@@ -169,15 +171,23 @@ main{
     padding: 6px 10px;
     border: 1px solid;
 }
-#email,#phone{
+.input-email,
+.input-phone{
     font-size: 1.2rem;
     height: 100%;
     outline: none;
 }
-#email:focus,
-#phone:focus{
+
+.input-email:hover,
+.input-phone:hover {
     background-color: #EEEEEE;
 }
+.input-email:focus-visible,
+.input-phone:focus-visible {
+    box-shadow: none;
+    background-color: #EEEEEE;
+}
+
 
 .label{
     font-size: 1.1rem;
@@ -251,8 +261,9 @@ main{
 .radio-item__input:hover + .radio-item__mark{
     border: 3px solid #7B8A92;
 }
-.radio-item__input:focus + .radio-item__mark{
-    border: 3px solid #3698FB;
+.radio-item__input:focus-visible + .radio-item__mark{
+    box-shadow:  0 0 0 2px #ffffff,
+    0 0 0 4px #3698fb;
 }
 .radio-item__input:checked + .radio-item__mark{
     border: 3px solid #3698FB;
@@ -280,14 +291,14 @@ main{
     height: 14px;
     padding-left: 2px;
 }
-.accord-box__input:hover,
-.accord-box__input:focus{
-    outline: 3px solid #3698FB;
+.accord-box__input:hover{
+    box-shadow:  0 0 0 2px #ffffff,
+    0 0 0 4px #3698fb;
 }
 
-.accord-box__label:hover ~ .accord-box__input{
-    border: 3px solid #7B8A92;
-}
+/*.accord-box__label:hover + .accord-box__input{*/
+/*    border: 3px solid #7B8A92;*/
+/*}*/
 
 .accord-box__label{
     padding-left: 8px;
